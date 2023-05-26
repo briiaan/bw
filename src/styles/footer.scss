@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+#pages {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-flow: row wrap;
+}
+#copyright-container {
+    padding-bottom: 2px;
+}
+#copyright-text {
+    text-align: center;
+    font-weight: 800;
+}
+#footer {
+    background-color: v.$brown;
+    color: v.$white;
+}

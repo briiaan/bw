@@ -1,0 +1,61 @@
+@use 'variables' as v;
+
+html {
+    font-family: "Roboto";
+    top: 0;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    display: inline;
+}
+
+li {
+    width: fit-content;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.background-black {
+    background-color: v.$black;
+}
+
+body {
+    margin: 0;
+    background: white;
+}
+
+.responsive {
+    width: 100%;
+    max-width: 291px;
+    height: auto;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.inline {
+    display: inline;
+}

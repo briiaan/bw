@@ -1,0 +1,93 @@
+@use 'variables' as v;
+
+
+
+@media (max-width: v.$tablet) {
+    #middle-container {
+        background-color: v.$white;
+        height: 138px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo-container {
+        height: 100%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding-left: 20px;
+        justify-content: start;
+    }
+    
+    #button-container {
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: v.$tablet) {
+    #middle-container {
+        background-color: v.$white;
+        height: 138px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    } 
+    
+    #logo-container {
+        height: 100%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+    
+    #button-container {
+        display: none
+    }
+}
+
+.side-menu {
+    z-index: 99;
+    height: 100% !important;
+    width: 70%;
+    top:180px;
+    background: v.$brown;
+    position: absolute;
+    left:0px;
+    color: v.$white;
+    ul {
+        position: relative;
+        top: 50px;
+    }
+    ul a {
+        justify-content: end;
+        margin: 30px;
+        display: flex;
+        text-align: center;
+        font-size: 7.2vw;
+    }
+}
+
+@keyframes sun-rise {
+    from {
+      left:-100%;
+    }
+    to {
+      left:0px;
+    }
+  }
+
+  @keyframes sun-rise-reverse {
+    from {
+      left:0px;
+    }
+    to {
+      left:-100%;
+    }
+  }

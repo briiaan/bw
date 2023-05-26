@@ -1,0 +1,81 @@
+@use 'variables' as v;
+
+#top-nav-container {
+    height: 39px;
+    color: v.$white;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 700;
+    position: relative;
+    top: 0px;
+} 
+
+@media (max-width: v.$tablet) {
+    #email {
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+    
+    #call {
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+    #a-phone {
+        display: none;
+    }
+    #a-email {
+        display: none;
+    }
+    #divider {
+        border-radius: 20%;
+        display: inline;
+        width: 2px;
+        height: 80%;
+        background-color: v.$white;
+    }
+}
+
+@media (min-width: v.$tablet) {
+    #email {
+        margin-left: 120px;
+        align-items: center;
+        height: 100%;
+        justify-content: start;
+    }
+    #a-phone {
+        display: inline;
+    }
+    #a-email {
+        display: inline;
+    }
+    
+    #call {
+        margin-right: 120px;
+        align-items: center;
+        height: 100%;
+        justify-content: end;
+    }
+    #divider {
+        display: none;
+    }
+}
+
+#spacer {
+    width: 20%;
+}
+
+#mail-icon {
+    margin-right: 5px;
+}
+
+#call-container {
+    width: 100%;
+    height: 100%;
+}
+#email-container {
+    width: 100%;
+    height: 100%;
+}

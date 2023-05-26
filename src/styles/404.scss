@@ -1,0 +1,20 @@
+#status-container {
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #http {
+        text-align: center;
+        #http-status-code-404 {
+            font-size: 60px;
+        }
+        #http-status-code-404-title {
+            font-size: 25px;
+    
+        }
+}
+}
+
+#style {
+    height: 200px;
+}

@@ -2,7 +2,9 @@
   "name": "bw",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
+    "host": "astro dev -- --host",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -10,6 +12,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.4.1"
+    "@astrojs/preact": "^2.1.0",
+    "astro": "^2.4.5",
+    "preact": "^10.13.2",
+    "sass": "^1.62.1"
+  },
+  "overrides": {
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest"
   }
 }

@@ -1,0 +1,76 @@
+@use 'variables' as v;
+
+#main-container {
+    height: 1000px;
+    width: auto;
+    position: relative;
+    #container-image-cover {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+#gallery-showcase {
+    background-color: v.$white;
+    height: 70vw;
+    @media (min-width: v.$tablet) {
+        height: 603px;
+    }
+}
+
+#information-banner {
+    background-color: black;
+    height: 40vw;
+    @media (min-width: v.$tablet) {
+        height: 215px;
+    }
+
+}
+
+#copyright-text {
+    font-size: 15px;
+}
+
+#main-container-introduction {
+    position: absolute;
+    z-index: 95;
+    text-align: center;
+    width: 100%;
+    @media (min-width: v.$tablet) {
+        top: 40px;
+        #main {
+            @media (min-width: v.$desktop) {font-size: 47.5px;}
+            font-size: 3.3vw;
+            font-weight: 900;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 10px;
+        }
+        #sub-main {
+            @media (min-width: v.$desktop) {font-size: 30.2px;}
+            margin-top: 0;
+            font-size: 2.1vw;
+            font-weight: 800;
+        }
+    }
+    @media (max-width: v.$tablet) {
+        top: 20px;
+        #main {
+            @media (max-width: 600px) {
+                font-size: 7.3vw;
+            }
+            font-size: 45px;
+            font-weight: 900;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 10px;
+        }
+        #sub-main {
+            margin-top: 0;
+            font-size: 3.5vw;
+            font-weight: 800;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    }
+}

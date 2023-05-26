@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+#bottom-container {
+    background-color: v.$brown;
+}
+
+
+@media (min-width: v.$tablet) {
+    #bottom-container-nav-bar{
+        color: v.$white;
+        width: 100%;
+        overflow: auto;
+        padding:0;
+        display: flex;
+        justify-content: center;
+        max-width: 1150px;
+        a {
+            margin: 5px;
+            float: left;
+            padding: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 23px;
+            width: 17.3%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+            text-align: center; /* If you want the text to be centered */
+            font-weight: 600;
+        }
+    }
+    
+    #nav-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: v.$tablet - 1px) {
+    #bottom-container {
+        height: 4px;
+    }
+    #bottom-container-nav-bar {
+        a {
+            display: none;
+        }
+        #nav-wrapper {
+            display: inline;
+            background-color: v.$brown;
+        }
+    }
+}

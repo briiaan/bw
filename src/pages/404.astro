@@ -1,8 +1,8 @@
 ---
 import "../styles/default.scss";
+import "../styles/404.scss";
 import Header from '../components/Header.jsx';
 import Footer from '../components/footer.jsx';
-import Homepage from '../components/Homepage.jsx';
 const email_current="quirozben24@icloud.com";
 const phone_current="425-610-5085";
 ---
@@ -20,7 +20,6 @@ const phone_current="425-610-5085";
 		<meta property="og:type" content="website">
 		<meta property=og:image" content="">
 		<meta property="site_name" content="BW Gutter Installation Services">
-		<meta name="theme-color" content="#4F4A3B">
 		<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,700&display=swap');
 		</style>
@@ -30,7 +29,16 @@ const phone_current="425-610-5085";
 	<header>
 	<Header email={email_current} phone={phone_current} client:load/>
 	</header>
-	<Homepage/>
+    <div id='status-container'>
+        <div id='http'>
+    <div id='http-status-code-404'>404</div>
+    <div id='http-status-code-404-title'>Page Not Found</div>
+    <div id='http-status-code-404-message'>The page you requested is missing or moved.</div>
+</div>
+</div>
+<div id='style'>
+
+</div>
 	<footer>
 		<Footer/>
 	</footer>
