@@ -16,6 +16,8 @@
     font-weight: 800;
 }
 #footer {
+    position: relative;
+    z-index: 100;
     background-color: v.$brown;
     color: v.$white;
 }

@@ -2,7 +2,7 @@ import {h, Fragment} from 'preact';
 import {useRef, useState, useEffect} from 'preact/compat'
 import '../styles/middlenav.scss';
 import '../styles/default.scss'
-import logo from '/bw_gutter_logo.png';
+import logo from '../images/bw_gutter_logo.png';
 
 export default function Middlenav({width}){
   const sideMenu = useRef(null);
@@ -34,7 +34,7 @@ export default function Middlenav({width}){
     <div id='middle-container'>
         <div id='logo-container'>
             <a href='/'>
-                <img src={logo} className='responsive' width={291} height={80} role="img"/>
+                <img src={logo.src} className='responsive' width={291} height={80} role="img"/>
             </a>
         </div>
         <div id='button-container'>
@@ -46,7 +46,7 @@ export default function Middlenav({width}){
             <ul>
                 <a href="/about-us">ABOUT US</a>
                 <a href="/gallery">GALLERY</a>
-                <a href="#">WHAT WE DO</a>
+                <a href="/#services">WHAT WE DO</a>
                 <a href="">CONTACT</a>
             </ul>
         </div>

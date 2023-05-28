@@ -54,7 +54,7 @@
 
 .side-menu {
     z-index: 99;
-    height: 100% !important;
+    height: calc(100% - 181px) !important;
     width: 70%;
     top:180px;
     background: v.$brown;

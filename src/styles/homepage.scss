@@ -1,7 +1,16 @@
 @use 'variables' as v;
 
 #main-container {
-    height: 1000px;
+    height: 1010px;
+    @media (min-width: v.$mobile) {
+        height: 1285px;
+    }
+    @media (min-width: v.$desktop - 80px) {
+        height: 1000px;
+    }
+    @media (min-width: 2700px) {
+        height: 1150px;
+    }
     width: auto;
     position: relative;
     #container-image-cover {
@@ -10,34 +19,146 @@
         width: 100%;
     }
 }
+
 #gallery-showcase {
     background-color: v.$white;
     height: 70vw;
     @media (min-width: v.$tablet) {
         height: 603px;
     }
+    #gallery-text {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        position: relative;
+        a {
+            margin-top: 20px;
+            font-size: 40px;
+            font-weight: 800;
+            margin-right: 3%;
+            @media (max-width: v.$tablet) {
+                font-size: 5vw;
+            }
+        }
+        svg {
+            width: 3.5vw;
+            height: 3.5vw;
+            max-width: 31px;
+            max-height: 31px;
+            animation: pointright 1s infinite;
+        }
+    }
+    #slides::-webkit-scrollbar {
+        display: none;
+    }
+    #slides {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        height: fit-content;
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+        scroll-snap-type: mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        img {
+            margin-top: 5%;
+            border-radius: 10px;
+            width: 40vw;
+            height: 50vw;
+            @media (min-width: v.$tablet) {
+                width: 381px;
+                height: 470px;
+            }
+        }
+        .slide-container {
+            height: fit-content;
+        }
+    }
 }
 
 #information-banner {
     background-color: black;
     height: 40vw;
+    font-weight: 700;
+    text-align: center;
     @media (min-width: v.$tablet) {
         height: 215px;
     }
-
+    #information-banner-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        color: v.$white;
+        font-size: 4vw;
+        @media (max-width: v.$tablet) {
+            padding-left: 7%;
+            padding-right: 7%;
+        }
+        @media (min-width: v.$tablet) {
+            font-size: 35px;
+            text-align: center;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        padding: 0;
+        margin: 0;
+    }
 }
 
 #copyright-text {
     font-size: 15px;
 }
 
+#container-buttons {
+    position: relative;
+    z-index: 95;
+    margin-top: 5%;
+    display: flex;
+    top: 28px;
+    gap: 7%;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    @media (max-width: v.$tablet) {
+        top: 30px;
+        gap: 30px;
+    }
+    #raq {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        text-align: center;
+        width: 80vw;
+        max-width: 300px;
+        padding: 20px 2% 20px 2%;
+        background-color: v.$brown;
+        font-size: 25px;
+        border-radius: 5px;
+        font-weight: 900;
+        @media (max-width: v.$mobile) {
+            font-size: large;
+            width: 60vw;
+            height: 35px;
+        }
+    }
+    #cu {
+        @extend #raq;
+    }
+}
+
 #main-container-introduction {
+    height: auto;
     position: absolute;
     z-index: 95;
     text-align: center;
     width: 100%;
     @media (min-width: v.$tablet) {
-        top: 40px;
+        top: 20px;
         #main {
             @media (min-width: v.$desktop) {font-size: 47.5px;}
             font-size: 3.3vw;
@@ -72,5 +193,60 @@
             margin-left: 15%;
             margin-right: 15%;
         }
+    }
+}
+
+#services{ 
+    position: relative;
+    top: 250px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    color: v.$white;
+    list-style: none;
+    @media (max-width: v.$mobile) {
+        gap: 5vw;
+        top: 160px;
+    }
+    li {
+        @media (max-width: v.$mobile) {
+            width: 130px;
+        }
+        @media (max-width: v.$tablet) {
+            padding: 20px;
+        }
+        width: 150px;
+        background: v.$brown;
+        border-radius: 10px;
+        padding: 80px;
+        p {
+            position: relative;
+            bottom: 0px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+@keyframes pointright {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes onload {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
     }
 }

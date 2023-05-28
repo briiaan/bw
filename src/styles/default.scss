@@ -1,14 +1,14 @@
 @use 'variables' as v;
 
 html {
-    font-family: "Roboto";
-    top: 0;
-    display: inline;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    background: white;
+    font-family: v.$font-family !important;
+    background: v.$white;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: v.$font-family !important;
 }
 
 a {

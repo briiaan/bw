@@ -1,0 +1,59 @@
+---
+import background from "../images/bwgutter_photos/249720a7-ee02-4388-a383-98e041081047.jpg";
+import '../styles/homepage.scss';
+const images = await Astro.glob('../images/bwgutter_photos/*').then(files => {
+    return files.map(file => file.default);
+});
+import { Image } from '@astrojs/image/components';
+const randomNumber = (...args) => {
+  let size = images.slice(0, images.length - args[1].length).length // 11;
+  for(let i = 0; i < args[0]; i++) {
+          size = images.slice(0, images.length - args[1].length).length;
+          args[1].push(Math.floor(Math.random() * size));
+          images.push(images[args[1][i]])
+          images.splice(args[1][i],1);
+          args[2].push(images[images.length-1])
+  }
+  return args[2];
+}
+const image = randomNumber(11,[],[]);
+const email_current="quirozben24@icloud.com";
+const phone_current="425-610-5085";
+---
+<div id='body'>
+        <div id='main-container'>
+            <Image id="container-image-cover" src={background} alt="Modern Seattle House" format="webp" quality={100}/>
+            <div id='main-container-introduction'>
+                <p id='main'>YOUR #1 PROVIDER FOR GUTTER SERVICES IN THE PUDGET SOUND</p>
+                <p id='sub-main'>SERVICES AVAILABLE IN SEATTLE, WA AND SURROUNDING AREAS</p>
+                <div id="container-buttons">
+                    <a href={"tel:" + phone_current} id='cu'>CALL US</a>
+                    <a href={"mailto:" + email_current} id='raq'>REQUEST A QUOTE</a>
+                </div>
+                <div id="services">
+                    <li>
+                        <div>
+                        <svg fill="#feffff" width="110px" height="110px" viewBox="0 0 512 512" version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Hammer"> <g id="XMLID_1229_"> <polygon id="XMLID_1230_" points="104.175,346.679 153.639,396.144 203.997,341.071 160.03,297.104 "></polygon> <path d="M228.319,68.566l27.369,27.37l31.625-31.625l-14.14-14.14C240.64,17.638,193.314,8.255,151.907,24.295 l10.374,3.458C187.033,36.004,209.868,50.117,228.319,68.566z" id="XMLID_1231_"></path> <path d="M17.336,423.753C8.898,431.326,4.058,441.79,3.75,453.178c-0.307,11.39,3.96,22.1,12.017,30.156 c8.056,8.057,18.767,12.336,30.156,12.016c11.39-0.307,21.853-5.148,29.463-13.627l64.793-70.861l-50.934-50.935L17.336,423.753z" id="XMLID_1232_"></path> <polygon id="XMLID_1233_" points="324.259,55.543 308.451,71.351 308.448,71.355 308.444,71.359 246.921,132.882 285.589,171.55 285.59,171.552 331.304,217.266 331.307,217.27 369.974,255.936 447.312,178.597 "></polygon> <polygon id="XMLID_1234_" points="491.879,223.162 483.69,231.351 483.686,231.356 422.733,292.309 422.723,292.317 414.539,300.501 430.926,316.888 508.265,239.549 "></polygon> <polygon id="XMLID_1235_" points="460.573,226.289 440.09,213.999 405.376,248.712 417.666,269.196 "></polygon> <polygon id="XMLID_1237_" points="174.96,283.854 217.456,326.351 310.478,224.619 278.138,192.279 "></polygon> </g> </g> <g id="Layer_1"></g> </g></svg>
+                            </div><p>REPAIRS</p></li>
+                    <li><div><svg fill="#ffffff" width="110px" height="110px" viewBox="0 0 512 512" version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Drill"> <g id="XMLID_1044_"> <polygon id="XMLID_1045_" points="71.6,418 126.798,418 130.852,395 75.654,395 "></polygon> <polygon id="XMLID_1056_" points="79.17,376 134.369,376 155.61,255 100.41,255 "></polygon> <path d="M92.052,235H93V94H75.888c-39.07,0-70.856,31.43-70.856,70.5c0,39.071,31.786,70.5,70.856,70.5H92.052z" id="XMLID_1057_"></path> <path d="M166.047,311h38.075c9.955,0,17.878-8.406,17.878-18.362V255h-46.158L166.047,311z" id="XMLID_1058_"></path> <polygon id="XMLID_1059_" points="339,192 363,192 363,180.569 363,137.465 363,125 339,125 "></polygon> <polygon id="XMLID_1060_" points="383,147 383,170 495.379,170 506.968,147 "></polygon> <path d="M113,235h54.484H319v-32.879v-86.207V94H113V235z M167.423,127h86.675c5.502,0,9.963,4.498,9.963,10 s-4.461,10-9.963,10h-86.675c-5.502,0-9.963-4.498-9.963-10S161.921,127,167.423,127z M167.423,181h86.675 c5.502,0,9.963,4.498,9.963,10s-4.461,10-9.963,10h-86.675c-5.502,0-9.963-4.498-9.963-10S161.921,181,167.423,181z" id="XMLID_1063_"></path> </g> </g> <g id="Layer_1"></g> </g></svg></div><p>INSTALLATIONS</p></li>
+                    <li><div>
+                    <svg fill="#ffffff" width="109px" height="109px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M3 4L3 24L17.449219 24L25 12.140625L32.550781 24L47 24L47 4L3 4 z M 25 15.859375L18.550781 26L6 26L6 46L21 46L21 35C21 32.79 22.79 31 25 31C27.21 31 29 32.79 29 35L29 46L44 46L44 26L31.449219 26L25 15.859375 z M 11 31L17 31L17 38L11 38L11 31 z M 33 31L39 31L39 38L33 38L33 31 z"></path></g></svg>
+                        </div><p>DOWNSPOUTS</p></li>
+                    <li><div><svg width="110px" height="110px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17,8C8,10,5.9,16.17,3.82,21.34L5.71,22l1-2.3A4.49,4.49,0,0,0,8,20C19,20,22,3,22,3,21,5,14,5.25,9,6.25S2,11.5,2,13.5a6.22,6.22,0,0,0,1.75,3.75C7,8,17,8,17,8Z"></path> <rect width="24" height="24" fill="none"></rect> </g></svg></div><p>SCREEN PROTECTORS</p></li>
+                </div>
+                </div>
+        </div>
+        <div id='information-banner'>
+            <p id='information-banner-text'>WE ARE A LOCALLY OWNED AND OPERATED BUSINESS IN WASHINGTON STATE.</p>
+            </div>
+            <div id='gallery-showcase'>
+                <div id='gallery-text'><a href="/gallery">VIEW MORE AT OUT GALLERY <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z" fill="#000000"></path> </g></svg></a></div>
+                <div id='slides'>
+                    {[0,1,2,3,4,5,6,7,8,9,10].map((x) => 
+                    <div class="slide-container" id={`slide-${x}`}>
+                        <Image src={image[x]} alt="" format="webp" quality={5}/>
+                    </div>
+                    )}
+                </div>
+            </div>
+        </div>

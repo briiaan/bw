@@ -1,0 +1,72 @@
+@use 'variables' as v;
+
+#container {
+    height: auto;
+    justify-content: center;
+    display: grid;
+    #title {
+        font-size: 40px;
+        padding-left: 0.01%;
+        padding-top: 10px;
+        @media (min-width: v.$mobile) {
+            padding-left: 0.0001%;
+            font-size: 30px;
+            padding-top: 20px;
+        }
+        @media (min-width: v.$tablet) {
+            padding-left: 70px;
+            font-size: 30px;
+            padding-top: 20px;
+            position: relative;
+        }
+    }
+    #images {
+        display: grid;
+        grid-template-columns: 45vw 45vw;
+        justify-content: center;
+        width: 100%;
+        column-gap: 10px;
+        row-gap: 10px;
+        padding-bottom: 40px;
+        img {
+            height: 50vw;
+            width: 45vw;
+            border-radius: 10px;
+        }
+        @media (min-width: v.$mobile) {
+            grid-template-columns: 40vw 40vw;
+            img {
+                height: 40vw;
+                width: 40vw;
+                border-radius: 10px;
+            }
+        }
+        @media (min-width: v.$tablet) {
+            grid-template-columns: 270px 270px 270px;
+            width: 974px;
+            img {
+                height: 270px;
+                width: 270px;
+                border-radius: 10px;
+            }
+            img:hover {
+                animation: 5s float forwards; 
+            }
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    75% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}

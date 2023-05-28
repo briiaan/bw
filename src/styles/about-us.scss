@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+#container {
+    #title {
+        font-size: 40px;
+        padding-left: 60px;
+        padding-top: 40px;
+        @media (max-width: v.$mobile) {
+            font-size: 30px;
+            padding-top: 20px;
+        }
+    }
+    #about-us-text {
+        font-size: 22px;
+        padding: 30px 60px 100px 60px;
+        @media (max-width: v.$mobile) {
+            font-size: 13px;
+            padding-top: 20px;
+        }
+    }
+}
