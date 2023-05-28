@@ -11,7 +11,7 @@ export default function Bottomnav(){
        <div id='bottom-container-nav-bar'>
         <a href='/about-us' className='hover'>ABOUT US</a>
         <a href='/gallery' className='hover'>GALLERY</a>
-        <a href='#services' className='hover'>WHAT WE DO</a>
+        <a href='/#services' className='hover'>WHAT WE DO</a>
         <a href='#' className='hover'>CONTACT</a>
        </div>
        </nav>
