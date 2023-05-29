@@ -3,6 +3,7 @@ import "../styles/default.scss";
 import "../styles/gallery.scss"
 import Header from '../components/Header.jsx';
 import Footer from '../components/footer.jsx';
+import og from "../images/og-image.png";
 const email_current="quirozben24@icloud.com";
 const phone_current="425-610-5085";
 const images = await Astro.glob('../images/bwgutter_photos/*').then(files => {
@@ -22,7 +23,8 @@ import { Image } from '@astrojs/image/components';
 		Call us at (425) 610-5085 or email us to schedule a service today. We offer a variety of services.">
 		<meta property="og:title" content="Gallery">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="../images/og-image.png">
+		<link rel="sitemap" href="/sitemap-index.xml">
+		<meta property="og:image" content={og}/>
 		<meta name="theme-color" content="#4F4A3B">
 		<meta property="site_name" content="BW Gutter Installation Services">
 		<style>

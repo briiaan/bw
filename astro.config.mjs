@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import preact from "@astrojs/preact";
 import image from '@astrojs/image';
+import sitemap from "@astrojs/sitemap";
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,9 +10,15 @@ export default defineConfig({
     compat: true
   }), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-})],
-  server: {
-    port: 8080
+  }), sitemap()],
+  outDir: './dist',
+  site: 'https://bwgutter.com',
+  compressHTML: true,
+  output: "hybrid",
+  experimental: {
+    hybridOutput: true,
   },
-  output: "server",
+  adapter: node({
+    mode: "standalone"
+  })
 });
