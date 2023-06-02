@@ -24,5 +24,8 @@
   "overrides": {
     "react": "npm:@preact/compat@latest",
     "react-dom": "npm:@preact/compat@latest"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
   }
 }

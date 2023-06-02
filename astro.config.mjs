@@ -14,10 +14,7 @@ export default defineConfig({
   outDir: './dist',
   site: 'https://bwgutter.com',
   compressHTML: true,
-  output: "hybrid",
-  experimental: {
-    hybridOutput: true,
-  },
+  output: "server",
   adapter: node({
     mode: "standalone"
   })

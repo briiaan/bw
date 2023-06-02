@@ -6,7 +6,6 @@ import Footer from '../components/footer.jsx';
 import Homepage from '../components/Homepage.astro';
 const email_current="quirozben24@icloud.com";
 const phone_current="425-610-5085";
-export const prerender = false;
 ---
 <html lang="en">
 	<head>
@@ -28,7 +27,7 @@ export const prerender = false;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
-		</head>
+	</head>
 	<body>
 	<header>
 	<Header email={email_current} phone={phone_current} client:load/>
