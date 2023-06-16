@@ -1,5 +1,5 @@
 #status-container {
-    height:100vh;
+    height:calc(100vh - (87px + 181px));
     display: flex;
     align-items: center;
     justify-content: center;

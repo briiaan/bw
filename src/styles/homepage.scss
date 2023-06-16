@@ -75,6 +75,12 @@
             height: fit-content;
         }
     }
+    .slide-container:first-child {
+        margin-left: 1%;
+    }
+    .slide-container:last-child {
+        margin-right: 1%;
+    }
 }
 
 #information-banner {
